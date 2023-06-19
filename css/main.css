@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: Calypso;
-    src: url("fonts/Calypso.ttf") format("truetype");
+    src: url("../fonts/Calypso.ttf") format("truetype");
 }
 
 body {
@@ -50,6 +50,7 @@ body {
 }
 
 .logo-content {
+    font-size: 30px;
 }
 
 .list-menu {
@@ -95,7 +96,6 @@ body {
 
 .home-row {
     display: flex;
-    flex-direction: row;
 }
 
 .home-img-1 {
@@ -131,7 +131,6 @@ body {
 
 .home-content-row {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     /*border: #8760da solid;*/
 }
@@ -182,18 +181,17 @@ body {
 
 .popular-row {
     display: flex;
+    overflow: auto;
 }
 
 .popular-items {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /*border: #05A88D solid;*/
 }
 
 .items-number {
     font-size: 16px;
-    /*border: #8760da solid;*/
 }
 
 .popular-title {
@@ -224,7 +222,6 @@ body {
 .popular-cards {
     display: flex;
     margin-left: 106px;
-    /*border: #8760da solid;*/
 }
 
 .popular-card {
@@ -269,7 +266,7 @@ body {
 }
 
 .about {
-    background: url("img/about/background-3.jpg") center;
+    background: url("../img/about/background-3.jpg") center;
     background-size: cover;
     padding: 146px 0;
 }
@@ -324,6 +321,7 @@ body {
     margin-bottom: 42px;
     /*justify-content: space-between;*/
     column-gap: 30px;
+    overflow: auto;
 }
 
 .catalog-card {
@@ -372,29 +370,34 @@ body {
 
 .masterclasses-row {
     display: flex;
-    flex-direction: row;
     column-gap: 32px;
     margin-top: 74px;
 }
 
 .masterclasses-column-1 {
+    float: left;
     display: flex;
     flex-direction: column;
     row-gap: 143px;
 }
 
-.masterclasses-column-1 img {
-    width: auto;
-    max-height: 500px;
-}
-
-#motto1 {
+#motto-mc {
     margin-top: 0;
     text-align: left;
 }
 
-.masterclass-2 {
+.masterclass-img-1 {
+    width: auto;
+    max-height: 500px;
+}
+
+.masterclass-img-2 {
     width: 100%;
+    height: auto;
+}
+
+.masterclasses-column-2 {
+    /*width: 100%;*/
 }
 
 .masterclasses-content {
@@ -416,7 +419,7 @@ body {
     text-align: left;
     font-family: Calypso, serif;
     font-weight: lighter;
-    font-size: 45px;
+    font-size: 46px;
     color: #754C2F;
 }
 
@@ -433,6 +436,10 @@ body {
 .subscription input::placeholder {
     color: #8c847a;
     font-weight: 400;
+}
+
+.subscription-email {
+    color: #8c847a;
 }
 
 .subscription-email .email-input {
@@ -459,7 +466,13 @@ body {
     margin-top: 20px;
 }
 
-.subscription-email input[type=checkbox] label {
+.sub-checkbox {
+    /*position: absolute;*/
+}
+
+.label-check {
+    /*position: relative;*/
+    /*padding-left: 20px;*/
 }
 
 .inst {
@@ -468,12 +481,24 @@ body {
 }
 
 .inst .container {
+}
 
+.list-images {
+    display: flex;
+    list-style: none;
+    padding-right: 0;
+    padding-left: 0;
+    overflow: auto;
+}
+
+.image-item {
+    height: 320px;
 }
 
 .inst-title {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 45px;
 }
 
 .footer-column {
@@ -484,13 +509,11 @@ body {
 
 .footer-row {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
 .footer-items {
     display: flex;
-    flex-direction: row;
     column-gap: 104px;
 }
 
@@ -513,8 +536,8 @@ body {
 .footer-col-row {
     margin-top: 67px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    font-size: 12px;
 }
 
 .foot-row-link {
