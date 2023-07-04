@@ -99,26 +99,22 @@ body {
 .home__img-1 {
     grid-row-start: 1;
     grid-row-end: span 2;
-    /*height: 540px;*/
-    border-radius: 220px 0 0 0;
+    border-radius: 50% 0 0 0;
     max-width: 100%;
 }
 
 .home__title {
     grid-column: span 2;
     align-self: end;
-    /*padding-left: 32px;*/
 }
 
 .home__title-name {
     text-transform: uppercase;
     color: #754C2F;
     font-size: 16px;
-    /*border: #05A88D solid;*/
 }
 
 .home__title-h1 {
-    /*border: #05A88D solid;*/
     font-family: Calypso, serif;
     font-weight: lighter;
     font-size: 73px;
@@ -129,8 +125,6 @@ body {
 .home__description {
     font-size: 16px;
     align-self: center;
-    /*padding-left: 32px;*/
-    /*padding-right: 32px;*/
 }
 
 .link {
@@ -151,8 +145,7 @@ body {
 
 .home__img-2 {
     grid-row-end: span 2;
-    border-radius: 200px 200px 0 0;
-    /*height: 470px;*/
+    border-radius: 45% 45% 0 0;
     max-width: 100%;
     align-self: end;
 }
