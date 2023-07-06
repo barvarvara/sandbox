@@ -9,10 +9,16 @@
     src: url("../fonts/Calypso.ttf") format("truetype");
 }
 
+:root {
+    --color-arrow-bg: #6B5E53;
+    --color-text: #754C2F;
+}
+
 body {
     font-family: 'Gilroy-Regular', sans-serif;
-    color: #6B5E53;
+    color: var(--color-arrow-bg);
     background-color: #ece8e4;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -110,16 +116,17 @@ body {
 
 .home__title-name {
     text-transform: uppercase;
-    color: #754C2F;
+    color: var(--color-text);
     font-size: 16px;
 }
 
 .home__title-h1 {
     font-family: Calypso, serif;
     font-weight: lighter;
-    font-size: 73px;
+    font-size: 74px;
     text-transform: uppercase;
-    color: #754C2F;
+    color: var(--color-text);
+    margin-top: 8px;
 }
 
 .home__description {
@@ -127,10 +134,28 @@ body {
     align-self: center;
 }
 
+.home__description > a {
+    display: inline-block;
+    margin-top: 2em;
+    position: relative;
+}
+
+.home__description > a::after {
+    vertical-align: middle;
+    content: "";
+    display: inline-block;
+    background: var(--color-text);
+    width: 48px;
+    height: 16px;
+    margin-left: 1em;
+    -webkit-mask-image: url("/img/icons/arrow-right.svg") ;
+    -webkit-mask-repeat: no-repeat;
+}
+
 .link {
     text-decoration: none;
     text-transform: uppercase;
-    color: #754C2F;
+    color: var(--color-text);
 }
 
 .link img {
