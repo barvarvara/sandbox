@@ -16,7 +16,7 @@
 
     .header__nav-toggle-btn {
         display: block;
-        background-image: url("/img/icons/nav-icon.svg");
+        background-image: url("../img/icons/nav-icon.svg");
         background-repeat: no-repeat;
         background-size: contain;
         background-color: transparent;
@@ -29,7 +29,7 @@
     }
 
     .header__nav-toggle-btn[aria-expanded="true"] {
-        background-image: url("/img/icons/close-icon.svg");
+        background-image: url("../img/icons/close-icon.svg");
     }
 
     .header__navigation {
@@ -55,12 +55,12 @@
         transform: translateX(0%);
     }
 
-    .menu-link {
+    .header__nav-link {
         font-size: 3vh;
         white-space: nowrap;
     }
 
-    .dropdown-link::after, .dropdown:hover .dropdown__menu, .dropdown__container {
+    .header__nav-link_dropdown::after, .dropdown:hover .header__dropdown-menu, .header__dropdown-container {
         display: none;
     }
 
@@ -85,7 +85,7 @@
         font-size: 16px;
     }
 
-    .link::after {
+    .home__link::after {
         -webkit-mask-size: 28px 12px;
         width: 28px;
         height: 12px;
@@ -135,7 +135,7 @@
         display: none;
     }
 
-    .link::after {
+    .home__link::after {
         -webkit-mask-size: 24px 8px;
         width: 24px;
         height: 8px;
