@@ -86,19 +86,26 @@
 
 
 <section class="popular container" id="popular">
-    <h2 class="popular__title-name">
+    <h3 class="popular__title-name">
         / Популярные<br>товары
-    </h2>
+    </h3>
+
 
     <div class="popular__items-arrows">
-        <!--                <img src="img/icons/left-arrow-2.svg" alt="left-arrow" class="left-arrow">-->
+        <button class="carousel__btn"></button>
+        <button class="carousel__btn"></button>
         01/03
-        <!--                <img src="img/icons/right-arrow-2.svg" alt="right-arrow" class="right-arrow">-->
+        <div class="carousel__track-container">
+
+        </div>
     </div>
 
-    <div class="popular__cards">
-        <div class="card">
-            <img src="img/popular/1.png" alt="1">
+    <div class="popular__carousel-cards">
+        <article class="popular-item-card">
+            <a href="#">
+                <img src="img/popular/1.png" alt="1">
+            </a>
+
             <div class="card__content">
                 <h3 class="card__title">
                     Подвесная лампа
@@ -107,9 +114,9 @@
                     от 8 900 &#8381;
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="popular-item-card">
             <img src="img/popular/2.jpg" alt="2">
             <div class="card__content">
                 <h3 class="card__title">
@@ -119,9 +126,9 @@
                     от 2 300 &#8381;
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="popular-item-card">
             <img src="img/popular/3-candles.jpg" alt="candles">
             <div class="card__content">
                 <h3 class="card__title">
@@ -131,7 +138,7 @@
                     от 1 600 &#8381;
                 </div>
             </div>
-        </div>
+        </article>
 
     </div>
 </section>
