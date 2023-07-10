@@ -95,7 +95,7 @@ body {
 }
 
 .logo__img {
-    background: url("/img/icons/logo-vase.svg");
+    background: url("../img/icons/logo-vase.svg");
     background-size: 24px 40px;
     display: inline-block;
     height: 40px;
@@ -116,7 +116,7 @@ body {
     background: var(--color-text-main);
     width: 16px;
     height: 12px;
-    -webkit-mask-image: url("/img/icons/list-arrow.svg");
+    -webkit-mask-image: url("../img/icons/list-arrow.svg");
     -webkit-mask-repeat: no-repeat;
 }
 
@@ -159,7 +159,7 @@ body {
     background-size: contain;
     border: 0;
     background-color: transparent;
-    background-image: url("/img/icons/basket.png");
+    background-image: url("../img/icons/basket.png");
     cursor: pointer;
 }
 
@@ -223,7 +223,7 @@ body {
     width: 48px;
     height: 16px;
     margin-left: 1rem;
-    -webkit-mask-image: url("/img/icons/arrow-right.svg");
+    -webkit-mask-image: url("../img/icons/arrow-right.svg");
     -webkit-mask-repeat: no-repeat;
 }
 
