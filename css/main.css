@@ -77,17 +77,13 @@ body {
     display: block;
 }
 
-.logo {
+.logo a {
     font-family: Calypso, serif;
-    text-decoration: none;
-    color: var(--color-text-main);
     text-transform: uppercase;
     font-size: 1rem;
-}
-
-.logo a {
     color: var(--color-text-main);
     text-decoration: none;
+
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -97,7 +93,6 @@ body {
 .logo__img {
     background: url("../img/icons/logo-vase.svg");
     background-size: 24px 40px;
-    display: inline-block;
     height: 40px;
     width: 24px;
 }
@@ -151,7 +146,6 @@ body {
 .header__dropdown-menu a:hover {
     color: var(--color-text-main-dark);
 }
-
 
 .header__cart-btn {
     height: 32px;
@@ -216,7 +210,7 @@ body {
 }
 
 .home__link::after {
-    vertical-align: middle;
+    line-height: 1.2rem;
     content: "";
     display: inline-block;
     background: var(--color-text-title);
