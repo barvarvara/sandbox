@@ -91,6 +91,34 @@
         width: 28px;
         height: 12px;
     }
+
+    .popular {
+        grid-template-areas:
+                "title"
+                "cards"
+                "pagination";
+        grid-template-rows: min-content 1fr max-content;
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+    }
+
+    .popular__title-name {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        margin-top: 0;
+    }
+
+    .popular__nav {
+        grid-row-start: 3;
+    }
+
+    .popular__cards {
+        grid-row-start: 2;
+        grid-row-end: span 1;
+        grid-column-start: 1;
+    }
+
+
 }
 
 
