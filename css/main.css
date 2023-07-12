@@ -23,6 +23,8 @@ body {
     color: var(--color-text-main);
     background-color: var(--color-bg);
     scroll-behavior: smooth;
+    max-width: 2423px;
+    margin: 0 auto;
 }
 
 .container, .container-header, .container-home {
@@ -229,20 +231,20 @@ body {
 }
 
 
+
 .popular {
     display: grid;
     grid-template-columns: max-content 1fr;
-    grid-template-rows: 1fr min-content;
+    grid-template-rows: 1fr auto;
     grid-template-areas:
       "title cards"
       "arrows cards";
     grid-column-gap: 6.5rem;
 }
 
-.popular__nav {
+.popular__navigation {
     font-size: 16px;
 }
-
 
 .popular__title-name {
     margin-top: 128px;
@@ -254,66 +256,17 @@ body {
     white-space: nowrap;
 }
 
-.popular__cards {
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: span 2;
-    overflow-x: auto;
-}
-
-.popular__cards-list {
-    /*display: flex;
-    justify-content: space-between;
-    overflow: auto;
-    column-gap: 2rem;*/
-}
-
-.popular__cards-list > * {
-    /*flex-basis: 100%;*/
-}
-
-.splide__slide {
-    flex: 1 0 auto;
-}
-
-.card {
-    /*width: 262px;*/
-    /*width: 16.375rem;*/
-    /*width: 18.194vw;*/
-    /*min-width: 100%;*/
-    min-height: 430px;
-
-    background-color: #f6f3ef;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.card img {
-    height: 21.188em;
-}
-
-.card + .card {
-    margin-left: 2rem;
-}
-
 .popular__pagination {
     color: var(--color-text-main-light);
 }
 
-.popular__pagination.current-item {
+.popular__current-slide {
     color: var(--color-text-main);
 }
 
-.popular__nav {
+.popular__navigation {
     display: flex;
     align-items: center;
-}
-
-.splide__pagination__page {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0 0.3rem;
 }
 
 .popular__splide-btn {
@@ -326,7 +279,7 @@ body {
     cursor: pointer;
 }
 
-.popular__carousel-btn_right {
+.popular__splide-btn_right {
     -webkit-mask-image: url("../img/icons/arrow-right.svg");
     -webkit-mask-repeat: no-repeat;
     margin-left: 0.875rem;
@@ -338,12 +291,39 @@ body {
     margin-right: 0.875rem;
 }
 
+.popular__cards {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    overflow: auto;
+}
+
+
+
+.card {
+    /*max-height: 100%;*/
+    /*height: 100%;*/
+    background-color: #f6f3ef;
+    text-align: center;
+}
+
+.card a {
+    display: block;
+    width: 100%;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card + .card {
+    margin-left: 2rem;
+}
+
 .card__content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+    padding: 24px 48px;
 }
 
 .card__title {
