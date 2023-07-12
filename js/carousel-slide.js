@@ -21,12 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   })
 
-  splide.on('pagination:mounted', (data) => {
-    console.log(data.list.classList)
-    data.list.classList.add('current-item');
-    console.log(data.items)
-    
-    data.items.forEach((item) => {
+  splide.on('pagination:mounted', (paginationData) => {
+    console.log(paginationData.list.classList)
+    // data.list.classList.add('current-item');
+    console.log(paginationData.items)
+
+    paginationData.items.forEach((item) => {
       item.button.textContent = '0' + String(item.page + 1);
     });
   })

@@ -316,15 +316,6 @@ body {
     margin: 0 0.3rem;
 }
 
-.splide__pagination {
-    counter-reset: pagination-num;
-}
-
-.splide__pagination__page:before {
-    counter-increment: pagination-num;
-    content: counter(pagination-num);
-}
-
 .popular__splide-btn {
     content: "";
     display: inline-block;
