@@ -11,51 +11,63 @@ document.addEventListener('DOMContentLoaded', () => {
     arrows: false,
     pagination: false,
     perPage: SLIDERS_PER_PAGE,
-    rewind: true,
+    perMove: SLIDERS_PER_PAGE,
     speed: 1000,
     gap: '2rem',
-    drag: false,
-    
+    trimSpace: false,
+
+
     breakpoints: {
       1248: {
         perPage: SLIDERS_PER_PAGE_MOB,
+        perMove: SLIDERS_PER_PAGE_MOB,
         gap: '2.5rem',
       },
       714: {
-        perPage: SLIDERS_PER_PAGE_MOB,
         gap: '1.4rem',
-      }
+      },
+      // 357: {
+      //   perPage: 1
+      // }
     },
   })
   
-  const defineSlidesNum = (slidersPerPage) => {
+  const defineSlidesNum = () => {
     splide.on('mounted', () => {
-      const slidesNumPerPage = Math.ceil(splide.length / slidersPerPage)
+      const slidesNumPerPage = Math.ceil(splide.length / splide.options.perPage)
       slidesNum.textContent = '0'.concat(String(slidesNumPerPage))
     })
   }
 
-  const defineCurrentPageIndex = (slidersPerPage) => {
+  const defineCurrentPageIndex = () => {
     splide.on('moved', (newIndex, prevIndex, destIndex) => {
-      const pageIndex = Math.ceil((newIndex) / slidersPerPage + 1)
+      const pageIndex = Math.ceil((newIndex) / splide.options.perPage + 1)
       currentPageIndex.textContent = '0'.concat(String(pageIndex))
     });
   }
 
-  const initNavBtnsActions = (slidersPerPage) => {
+  const initNavBtnsActions = () => {
     btnNext.addEventListener('click', e => {
-      splide.go(`+${slidersPerPage}`)
+      splide.go(`>`)
     })
 
     btnPrev.addEventListener('click', e => {
-      splide.go(`-${slidersPerPage}`)
+      splide.go(`<`)
     })
   }
 
-  defineSlidesNum(SLIDERS_PER_PAGE)
-  defineCurrentPageIndex(SLIDERS_PER_PAGE)
-  initNavBtnsActions(SLIDERS_PER_PAGE)
-  
+  defineSlidesNum()
+  defineCurrentPageIndex()
+  initNavBtnsActions()
+
+
+  splide.on('resize', () => {
+    console.log('resized')
+    defineSlidesNum()
+    defineCurrentPageIndex()
+  })
+
+
 
   splide.mount();
 })
