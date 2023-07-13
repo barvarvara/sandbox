@@ -14,22 +14,22 @@ document.addEventListener('DOMContentLoaded', () => {
     rewind: true,
     speed: 1000,
     gap: '2rem',
-    cover: true,
-    width : '100vw',
-
+    drag: false,
+    
     breakpoints: {
-      1175: {
-        perPage: SLIDERS_PER_PAGE_MOB
+      1248: {
+        perPage: SLIDERS_PER_PAGE_MOB,
+        gap: '2.5rem',
+      },
+      714: {
+        perPage: SLIDERS_PER_PAGE_MOB,
+        gap: '1.4rem',
       }
-      // 714: {
-      //   perPage: SLIDERS_PER_PAGE_MOB,
-      // }
     },
   })
-
+  
   const defineSlidesNum = (slidersPerPage) => {
     splide.on('mounted', () => {
-      // console.log(splide.length)
       const slidesNumPerPage = Math.ceil(splide.length / slidersPerPage)
       slidesNum.textContent = '0'.concat(String(slidesNumPerPage))
     })
@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const defineCurrentPageIndex = (slidersPerPage) => {
     splide.on('moved', (newIndex, prevIndex, destIndex) => {
-      // console.log(newIndex);
       const pageIndex = Math.ceil((newIndex) / slidersPerPage + 1)
       currentPageIndex.textContent = '0'.concat(String(pageIndex))
     });

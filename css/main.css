@@ -253,7 +253,9 @@ body {
     font-size: 24px;
     text-transform: uppercase;
     color: #754C2F;
-    white-space: nowrap;
+
+    max-width: 190px;
+    overflow-wrap: break-word;
 }
 
 .popular__pagination {
@@ -299,12 +301,12 @@ body {
 }
 
 
-
 .card {
     /*max-height: 100%;*/
     /*height: 100%;*/
     background-color: #f6f3ef;
     text-align: center;
+    position: relative;
 }
 
 .card a {
@@ -316,22 +318,20 @@ body {
     width: 100%;
 }
 
-.card + .card {
-    margin-left: 2rem;
-}
-
 .card__content {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
     padding: 24px 48px;
+    font-size: 15px;
 }
 
 .card__title {
     text-transform: uppercase;
-    font-size: 16px;
+    white-space: nowrap;
 }
 
 .card__price {
-    font-size: 16px;
     margin-top: 8px;
 }
