@@ -26,18 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
       714: {
         gap: '1.4rem',
       },
-      // 357: {
-      //   perPage: 1
-      // }
+      340: {
+        perPage: 1,
+        perMove: 1,
+      }
     },
   })
-  
-  const defineSlidesNum = () => {
-    splide.on('mounted', () => {
-      const slidesNumPerPage = Math.ceil(splide.length / splide.options.perPage)
-      slidesNum.textContent = '0'.concat(String(slidesNumPerPage))
-    })
-  }
 
   const defineCurrentPageIndex = () => {
     splide.on('moved', (newIndex, prevIndex, destIndex) => {
@@ -56,18 +50,23 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  defineSlidesNum()
-  defineCurrentPageIndex()
-  initNavBtnsActions()
+  splide.on('mounted', () => {
+    console.log('mounted')
+    
+    const slidesNumPerPage = Math.ceil(splide.length / splide.options.perPage)
+    slidesNum.textContent = '0'.concat(String(slidesNumPerPage))
 
-
+    defineCurrentPageIndex()
+    initNavBtnsActions()
+  })
+  
   splide.on('resize', () => {
-    console.log('resized')
-    defineSlidesNum()
+    console.log('resize')
+
+    const slidesNumPerPage = Math.ceil(splide.length / splide.options.perPage)
+    slidesNum.textContent = '0'.concat(String(slidesNumPerPage))
     defineCurrentPageIndex()
   })
-
-
 
   splide.mount();
 })

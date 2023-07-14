@@ -2,6 +2,10 @@
     .card__title {
         font-size: 13px;
     }
+
+    .card__price {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 1070px) {
@@ -97,6 +101,15 @@
         height: 12px;
     }
 
+    .popular {
+        grid-column-gap: 4rem;
+    }
+
+    .popular__title-name {
+        margin-top: 0;
+        align-self: center;
+    }
+
 }
 
 @media (max-width: 737px) {
@@ -128,7 +141,6 @@
         margin-top: 2px;
     }
 }
-
 
 
 @media (max-width: 714px) {
@@ -256,5 +268,11 @@
 @media (max-width: 400px) {
     .section-title {
         font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .home__title-h1 {
+        font-size: 40px;
     }
 }
