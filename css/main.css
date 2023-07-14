@@ -45,6 +45,14 @@ body {
     margin-top: 24px;
 }
 
+.section-title {
+    font-family: 'Calypso', serif;
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #754C2F;
+}
+
 .header {
     width: 100%;
     display: flex;
@@ -203,16 +211,21 @@ body {
     z-index: 0;
 }
 
-.home__link {
+.link-arrow {
     display: inline-block;
-    margin-top: 2rem;
     text-decoration: none;
     text-transform: uppercase;
     color: var(--color-text-title);
 }
 
-.home__link::after {
-    line-height: 1.2rem;
+.home__link {
+    margin-top: 2rem;
+}
+
+/*выровнять стрелку
+выровнять блок с текстом и ссылкой*/
+
+.link-arrow::after {
     content: "";
     display: inline-block;
     background: var(--color-text-title);
@@ -221,6 +234,8 @@ body {
     margin-left: 1rem;
     -webkit-mask-image: url("../img/icons/arrow-right.svg");
     -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 48px 16px;
+    vertical-align: middle;
 }
 
 .home__img-2 {
@@ -248,12 +263,6 @@ body {
 
 .popular__title-name {
     margin-top: 128px;
-    font-family: 'Calypso', serif;
-    font-weight: 500;
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #754C2F;
-
     max-width: 190px;
     overflow-wrap: break-word;
 }
@@ -334,4 +343,44 @@ body {
 
 .card__price {
     margin-top: 8px;
+}
+
+
+
+.about {
+    background: url("../img/about/background-vases-short-2.jpg") no-repeat bottom center;
+    background-size: 100%;
+}
+
+.motto {
+    font-family: Calypso, serif;
+    font-weight: lighter;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #754C2F;
+    margin-top: 74px;
+    text-align: center;
+}
+
+.about__motto {
+    margin-right: 56px;
+    margin-left: 56px;
+}
+
+.about__content {
+    margin-top: 56px;
+    max-width: 362px;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 44px;
+}
+
+.about__content-text p + p {
+    margin-top: 24px;
+}
+
+.about__content-text {
+    font-size: 16px;
 }
