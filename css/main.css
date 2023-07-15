@@ -226,7 +226,7 @@ body {
 .link-arrow::after {
     content: "";
     display: inline-block;
-    width: 48px;
+    width: 44px;
     height: 16px;
     margin-left: 0.8rem;
 
@@ -235,7 +235,7 @@ body {
 
     -webkit-mask-image: url("../img/icons/arrow-right.svg");
     -webkit-mask-repeat: no-repeat;
-    /*-webkit-mask-size: contain;*/
+    -webkit-mask-size: contain;
 
     position: absolute;
     /*display: block;*/
@@ -352,8 +352,9 @@ body {
 
 
 .about {
-    background: url("../img/about/background-vases-short-2.jpg") no-repeat bottom center;
-    background-size: 100%;
+    background: url("../img/about/background-vases-short-3.jpg") no-repeat bottom center;
+    background-size: cover;
+
     display: flex;
     flex-direction: column;
 }
@@ -376,8 +377,9 @@ body {
 .about__content {
     margin-top: 56px;
     max-width: 362px;
-    text-align: left;
     align-self: end;
+
+    text-align: left;
 }
 
 .about__content-text p + p {

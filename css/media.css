@@ -145,8 +145,8 @@
 
 @media (max-width: 714px) {
     .container, .container-header, .container-home {
-        padding-left: 1.2rem;
-        padding-right: 1.2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .container {
@@ -184,7 +184,7 @@
     }
 
     .home__title-name {
-        font-size: 1rem;
+        font-size: 14px;
     }
 
     .home {
@@ -215,15 +215,13 @@
         display: none;
     }
 
-    .home__link {
-        font-size: 12px;
+    .link-arrow {
+        font-size: 14px;
     }
 
-    .home__link::after {
-        -webkit-mask-size: 24px 8px;
-        width: 24px;
-        height: 8px;
-        margin-left: 0.3rem;
+    .link-arrow::after {
+        width: 30px;
+        margin-left: 0.5rem;
     }
 
     .popular {
@@ -256,6 +254,29 @@
         grid-column-start: 1;
     }
 
+    .about {
+        row-gap: 3rem;
+    }
+
+    .about__motto {
+        margin: 0;
+    }
+
+    .motto {
+        font-size: 1.88rem;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .about__content {
+        align-self: start;
+        max-width: 100%;
+        margin-top: 0;
+    }
+
+    .about__content-text {
+        font-size: 14px;
+    }
 }
 
 

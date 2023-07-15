@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   splide.on('mounted', () => {
-    console.log('mounted')
+    // console.log('mounted')
     
     const slidesNumPerPage = Math.ceil(splide.length / splide.options.perPage)
     slidesNum.textContent = '0'.concat(String(slidesNumPerPage))
@@ -61,7 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
   })
   
   splide.on('resize', () => {
-    console.log('resize')
+    // console.log('resize')
+    // console.log(splide.options.perPage)
 
     const slidesNumPerPage = Math.ceil(splide.length / splide.options.perPage)
     slidesNum.textContent = '0'.concat(String(slidesNumPerPage))
