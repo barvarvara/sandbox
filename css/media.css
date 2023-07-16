@@ -6,6 +6,14 @@
     .popular__card-price {
         font-size: 13px;
     }
+
+    .masterclasses__motto {
+        padding: 0;
+    }
+
+    .masterclasses__text-content {
+        padding-top: 56px;
+    }
 }
 
 @media (max-width: 1082px) {
@@ -112,6 +120,42 @@
 
 }
 
+@media (max-width: 896px) {
+
+    /*.masterclasses__img-class {*/
+    /*    grid-row-start: 2;*/
+    /*    grid-row-end: span 1;*/
+    /*    grid-column-start: 1;*/
+    /*    grid-column-end: 2;*/
+    /*}*/
+
+    /*.masterclasses__img-potter {*/
+    /*    grid-column-start: 1;*/
+    /*    grid-row-start: 3;*/
+    /*    grid-row-end: span 1;*/
+    /*}*/
+
+    /*.masterclasses__text-content {*/
+    /*    grid-row-start: 2;*/
+    /*    grid-row-end: span 3;*/
+    /*    padding: 0;*/
+    /*    align-self: center;*/
+
+    /*}*/
+
+    /*.masterclasses__motto {*/
+    /*    grid-column-end: span 2;*/
+    /*}*/
+
+    /*.masterclasses__grid {*/
+    /*    grid-template-areas:*/
+    /*            "motto motto"*/
+    /*            "img1 text"*/
+    /*            "img2 text";*/
+    /*    grid-row-gap: 2rem;*/
+    /*}*/
+}
+
 @media (max-width: 737px) {
     .popular__navigation {
         font-size: 12px;
@@ -140,13 +184,18 @@
         font-size: 11px;
         margin-top: 2px;
     }
+
+    .motto {
+        font-size: 40px;
+    }
+
 }
 
 
 @media (max-width: 714px) {
     .container, .container-header, .container-home {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
     }
 
     .container {
@@ -263,7 +312,7 @@
     }
 
     .motto {
-        font-size: 1.88rem;
+        font-size: 1.8rem;
         text-align: left;
     }
 
@@ -276,6 +325,40 @@
     .about__content-text {
         font-size: 14px;
     }
+
+    .masterclasses__grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content auto auto;
+        grid-template-areas:
+            "motto"
+            "img2"
+            "text";
+
+        grid-row-gap: 2.5rem;
+        margin-top: 2.5rem;
+    }
+
+    .masterclasses__img-class {
+        display: none;
+    }
+
+    .masterclasses__motto {
+        padding: 0;
+    }
+
+    .masterclasses__img-potter {
+        grid-row-end: span 1;
+    }
+
+    .masterclasses__text-content {
+        font-size: 14px;
+        padding-top: 0;
+    }
+
+    .masterclasses__link {
+        margin-top: 32px;
+    }
+
 }
 
 
