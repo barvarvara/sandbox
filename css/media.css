@@ -1,9 +1,9 @@
 @media (max-width: 1350px) {
-    .popular__card-title {
+    .card-title {
         font-size: 13px;
     }
 
-    .popular__card-price {
+    .card-price {
         font-size: 13px;
     }
 
@@ -156,6 +156,17 @@
     /*}*/
 }
 
+@media (max-width: 900px) {
+    .subscription__content {
+        column-gap: 64px;
+        margin-top: 32px;
+    }
+
+    .subscription__motto {
+        font-size: 40px;
+    }
+}
+
 @media (max-width: 737px) {
     .popular__navigation {
         font-size: 12px;
@@ -165,30 +176,33 @@
         font-size: 12px;
     }
 
-    .popular__splide-btn {
+    .arrow-btn {
         width: 28px;
         height: 12px;
         -webkit-mask-size: 28px 12px;
         background-size: auto 150px;
     }
 
-    .popular__card-content {
+    .card-content {
         padding: 12px 48px;
     }
 
-    .popular__card-title {
+    .card-title {
         font-size: 10px;
     }
 
-    .popular__card-price {
+    .card-price {
         font-size: 11px;
         margin-top: 2px;
+    }
+
+    .title {
+        font-size: 1.1rem;
     }
 
     .motto {
         font-size: 40px;
     }
-
 }
 
 
@@ -359,13 +373,43 @@
         margin-top: 32px;
     }
 
+    .subscription {
+        padding-top: 88px;
+        padding-bottom: 88px;
+    }
+
+    .subscription__content {
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 40px;
+
+        margin-top: 32px;
+    }
+
+    .subscription__motto {
+        font-size: 28px;
+    }
+
+    .subscription__email {
+        font-size: 0.9rem;
+    }
+
+    .form-text-input {
+        font-size: 0.9rem;
+        padding: 16px;
+    }
+
+    .form-checkbox-input + label {
+        font-size: 0.8rem;
+    }
+
 }
 
 
 @media (max-width: 500px) {
-    .title {
-        font-size: 1.2rem;
-    }
+    /*.title {*/
+    /*    font-size: 1.2rem;*/
+    /*}*/
 }
 
 @media (max-width: 400px) {

@@ -2,8 +2,8 @@ const SLIDERS_PER_PAGE = 3;
 const SLIDERS_PER_PAGE_MOB = 2;
 
 document.addEventListener('DOMContentLoaded', () => {
-  const btnNext = document.querySelector('.popular__splide-btn_right')
-  const btnPrev = document.querySelector('.popular__splide-btn_left')
+  const btnNext = document.querySelector('.arrow-btn_right')
+  const btnPrev = document.querySelector('.arrow-btn_left')
   const currentPageIndex = document.querySelector('.popular__current-slide')
   const slidesNum = document.querySelector('.popular__slides-num')
 

@@ -12,8 +12,10 @@
 :root {
     --color-bg: #ece8e4;
     --color-bg-lighter: #f6f3ef;
+    --color-bg-darker: #e1dcd9;
     --color-text-main: #6B5E53;
     --color-text-main-light: #9f978d;
+    --color-text-placeholder: #8c847a;
     --color-text-main-dark: #443a30;
     --color-text-title: #754C2F;
 }
@@ -282,6 +284,8 @@ body {
 
 .popular__pagination {
     color: var(--color-text-main-light);
+    margin-left: 0.875rem;
+    margin-right: 0.875rem;
 }
 
 .popular__current-slide {
@@ -293,7 +297,7 @@ body {
     align-items: center;
 }
 
-.popular__splide-btn {
+.arrow-btn {
     content: "";
     display: inline-block;
     background: var(--color-text-main-light);
@@ -303,16 +307,14 @@ body {
     cursor: pointer;
 }
 
-.popular__splide-btn_right {
+.arrow-btn_right {
     -webkit-mask-image: url("../img/icons/arrow-right.svg");
     -webkit-mask-repeat: no-repeat;
-    margin-left: 0.875rem;
 }
 
-.popular__splide-btn_left {
+.arrow-btn_left {
     -webkit-mask-image: url("../img/icons/arrow-left.svg");
     -webkit-mask-repeat: no-repeat;
-    margin-right: 0.875rem;
 }
 
 .popular__cards {
@@ -322,23 +324,22 @@ body {
     overflow: auto;
 }
 
-
-.popular__card {
+.card {
     background-color: #f6f3ef;
     text-align: center;
     position: relative;
 }
 
-.popular__card a {
+.card a {
     display: block;
     width: 100%;
 }
 
-.popular__card img {
+.card img {
     width: 100%;
 }
 
-.popular__card-content {
+.card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -347,12 +348,12 @@ body {
     font-size: 15px;
 }
 
-.popular__card-title {
+.card-title {
     text-transform: uppercase;
     white-space: nowrap;
 }
 
-.popular__card-price {
+.card-price {
     margin-top: 8px;
 }
 
@@ -451,4 +452,117 @@ body {
 
 .masterclasses__link {
     margin-top: 44px;
+}
+
+/*subscription section*/
+
+.subscription {
+    background-color: var(--color-bg-darker);
+    padding-top: 104px;
+    padding-bottom: 104px;
+}
+
+.subscription__content {
+    display: flex;
+    column-gap: 208px;
+    margin-top: 56px;
+}
+
+.subscription__motto {
+    font-family: Calypso, serif;
+    font-weight: lighter;
+    font-size: 45px;
+    color: var(--color-text-title);
+}
+
+.form-text-input {
+    background-color: transparent;
+    color: var(--color-text-placeholder);
+    font-family: "Gilroy-Regular", sans-serif;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    padding: 20px;
+}
+
+.subscription__form {
+    border: #8c847a solid 1px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 16px;
+}
+
+.subscription__btn {
+    background-color: var(--color-text-main);
+    align-self: center;
+    margin-right: 24px;
+}
+
+.subscription__checkbox {
+    margin-top: 24px;
+    display: flex;
+    align-items: start;
+}
+
+.form-checkbox-input {
+    display: inline-block;
+}
+
+.form-checkbox-input + label {
+    margin-left: 8px;
+    display: inline-block;
+}
+
+
+/*inst section*/
+.inst {
+    padding-top: 144px;
+    padding-bottom: 138px;
+}
+.inst .container {
+}
+.inst-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*footer*/
+
+.footer-column {
+    border-top: 2px solid #6B5E53;
+    padding-top: 56px;
+    margin-bottom: 24px;
+}
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer-items {
+    display: flex;
+    flex-direction: row;
+    column-gap: 104px;
+}
+.footer-item {
+}
+.footer-item-title {
+    text-transform: uppercase;
+}
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 21px;
+    margin-top: 30px;
+    list-style: none;
+}
+.footer-col-row {
+    margin-top: 67px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.foot-row-link {
+    color: #6B5E53;
 }
