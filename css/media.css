@@ -49,6 +49,7 @@
     .header__nav-toggle-btn[aria-expanded="true"] {
         background-image: url("../img/icons/close-icon.svg");
         background-size: contain;
+        position: fixed;
     }
 
     .header__navigation {
